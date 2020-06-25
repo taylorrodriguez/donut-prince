@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      name="description"
+      content="Donut shop in Burbank, CA. Users can add, update, and delete itmes from their shopping cart"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Donut Prince</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Fredoka+One|Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css"/>
+  </head>
+  <body>
+    <div class="overlay"></div>
+    <div class="bag-list-container">
+      <img src="img/other-formats/close.png" alt="x" class="close-bag" />
+      <img src="img/decor/sad.svg" alt="sad face" class="sad" />
+      <span class="empty">Your bag is empty</span>
+      <div class="bag-list"></div>
+      <span class="total-price invisible"
+        >Total: $<span class="main-total">0.00</span></span
+      >
+      <button class="checkout invisible">Checkout</button>
+    </div>
+    <div class="container">
+      <nav class="desk">
+        <div class="logo"><a href="#home">Donut Prince</a></div>
+        <ul class="desk-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="bag">
+          <div class="item-amount">1</div>
+          <img
+            class="bag-image"
+            src="img/decor/bag.svg"
+            alt="shopping bag"
+          />
+        </div>
+
+        <div class="social-icons">
+          <img src="img/socialmedia/facebook.jpg" alt="facebook" />
+          <img src="img/socialmedia/twitter.jpg" alt="twitter" />
+          <img src="img/socialmedia/instagram.jpg" alt="instagram" />
+        </div>
+        <div class="nav-icon">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-social-icons">
+          <img src="img/socialmedia/facebook.jpg" alt="facebook" />
+          <img src="img/socialmedia/twitter.jpg" alt="twitter" />
+          <img src="img/socialmedia/instagram.jpg" alt="instagram" />
+        </div>
+      </nav>
+      <header id="home">
+        <div class="banner">
+          <img src="img/decor/crown.svg" alt="crown" class="crown" />
+
+          <h1 class="main-title">Donut Prince</h1>
+          <h3 class="slogan">Burbank's most royal donuts</h3>
+          <button class="main-btn" onclick="location.href='#menu'">Menu</button>
+        </div>
+      </header>
+      <section id="about">
+        <h2 class="title">Who are we?</h2>
+        <div class="about-content">
+          <p>
+            We are a family owned donut shop located in
+            <strong> Burbank, Ca</strong>. At Donut Prince you will find the
+            most delicious donuts, always freshly baked and served to you with
+            the upmost love and care.
+          </p>
+          <div class="image-holder">
+            <img src="img/other-formats/restaurant.jpg" loading="lazy" alt="restaurant" />
+            <div class="close-map">&#10006;</div>
+            <div class="mapouter">
+              <div class="gmap_canvas">
+                <iframe
+                  title="map"
+                  width="100%"
+                  height="0px"
+                  id="gmap_canvas"
+                  rel="preload"
+                  src="https://maps.google.com/maps?q=donut%20prince%201721%20W%20Olive%20Ave%2C%20Burbank%2C%20CA%2091506%20%20&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                  frameborder="0"
+                  scrolling="no"
+                  marginheight="0"
+                  marginwidth="0"
+                ></iframe>
+              </div>
+            </div>
+
+            <div class="map-info">
+              <h2>Where are we?</h2>
+              <button class="see-map">See Map</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="menu">
+        <h2 class="title">Menu</h2>
+        <div class="menu-categories">
+          <div class="button-holder">
+            <button class="donuts-button">Donuts</button>
+            <button class="drinks-button">Coffee & Drinks</button>
+          </div>
+          <div class="donuts-menu">
+            <!-- <h3>Donuts</h3> -->
+            <div class="donuts-item-list">
+              <!-- ORIGINAL -->
+              <div class="donuts-item" id="original">
+                <h3 class="item-name">Original</h3>
+
+                <div class="item-image">
+                  <div class="donut-item-overlay">
+                    <p class="price">0.75</p>
+                  </div>
+                </div>
+                <p class="description invisible">
+                  This is our original Donut Prince donut! a classic!
+                </p>
+                <div class="add-container">
+                  <span class="add">Add to Bag</span>
+                  <img
+                    src="img/other-formats/close.png"
+                    alt="x"
+                    class="close-add invisible"
+                  />
+
+                  <div class="number-input invisible">
+                    <button class="minus"></button>
+                    <input
+                      class="quantity"
+                      min="1"
+                      name="quantity"
+                      value="1"
+                      type="number"
+                      disabled
+                    />
+                    <button class="plus"></button>
+                  </div>
+
+                  <span class="submit invisible">Submit</span>
+                  <span class="added invisible">Added &#10004;</span>
+                </div>
+              </div>
+              <!-- CHOCOLATE -->
+              <div class="donuts-item" id="chocolate">
+                <h3 class="item-name">Chocolate</h3>
+                <div class="item-image">
+                  <div class="donut-item-overlay">
+                    <p class="price">0.99</p>
+                  </div>
+                </div>
+                <p class="description invisible">
+                  This is our original Donut Prince donut! a classic!
+                </p>
+                <div class="add-container">
+                  <span class="add">Add to Bag</span>
+                  <img
+                    src="img/other-formats/close.png"
+                    alt="x"
+                    class="close-add invisible"
+                  />
+
+                  <div class="number-input invisible">
+                    <button class="minus"></button>
+                    <input
+                      class="quantity"
+                      min="1"
+                      name="quantity"
+                      value="1"
+                      type="number"
+                      disabled
+                    />
+                    <button class="plus"></button>
+                  </div>
+
+                  <span class="submit invisible">Submit</span>
+                  <span class="added invisible">Added &#10004;</span>
+                </div>
+              </div>
+              <!-- STARWBERRY -->
+              <div class="donuts-item" id="strawberry">
+                <h3 class="item-name">Strawberry</h3>
+                <div class="item-image">
+                  <div class="donut-item-overlay">
+                    <p class="price">0.75</p>
+                  </div>
+                </div>
+                <p class="description invisible">
+                  This is our original Donut Prince donut! a classic!
+                </p>
+                <div class="add-container">
+                  <span class="add">Add to Bag</span>
+                  <img
+                    src="img/other-formats/close.png"
+                    alt="x"
+                    class="close-add invisible"
+                  />
+                  <div class="number-input invisible">
+                    <button class="minus"></button>
+                    <input
+                      class="quantity"
+                      min="1"
+                      name="quantity"
+                      value="1"
+                      type="number"
+                      disabled
+                    />
+                    <button class="plus"></button>
+                  </div>
+
+                  <span class="submit invisible">Submit</span>
+                  <span class="added invisible">Added &#10004;</span>
+                </div>
+              </div>
+              <!-- MAPLE BAR -->
+              <div class="donuts-item" id="maple">
+                <h3 class="item-name">Maple Bar</h3>
+                <div class="item-image">
+                  <div class="donut-item-overlay">
+                    <p class="price">0.99</p>
+                  </div>
+                </div>
+                <p class="description invisible">
+                  This is our original Donut Prince donut! a classic!
+                </p>
+                <div class="add-container">
+                  <span class="add">Add to Bag</span>
+                  <img
+                    src="img/other-formats/close.png"
+                    alt="x"
+                    class="close-add invisible"
+                  />
+                  <div class="number-input invisible">
+                    <button class="minus"></button>
+                    <input
+                      class="quantity"
+                      min="1"
+                      name="quantity"
+                      value="1"
+                      type="number"
+                      disabled
+                    />
+                    <button class="plus"></button>
+                  </div>
+
+                  <span class="submit invisible">Submit</span>
+                  <span class="added invisible">Added &#10004;</span>
+                </div>
+              </div>
+
+              <!-- Jelly Donut  -->
+              <div class="donuts-item" id="jelly">
+                <h3 class="item-name">Jelly Donut</h3>
+                <div class="item-image">
+                  <div class="donut-item-overlay">
+                    <p class="price">0.99</p>
+                  </div>
+                </div>
+                <p class="description invisible">
+                  This is our original Donut Prince donut! a classic!
+                </p>
+                <div class="add-container">
+                  <span class="add">Add to Bag</span>
+                  <img
+                    src="img/other-formats/close.png"
+                    alt="x"
+                    class="close-add invisible"
+                  />
+                  <div class="number-input invisible">
+                    <button class="minus"></button>
+                    <input
+                      class="quantity"
+                      min="1"
+                      name="quantity"
+                      value="1"
+                      type="number"
+                      disabled
+                    />
+                    <button class="plus"></button>
+                  </div>
+
+                  <span class="submit invisible">Submit</span>
+                  <span class="added invisible">Added &#10004;</span>
+                </div>
+              </div>
+
+              <!-- CRULLER -->
+              <div class="donuts-item" id="cruller">
+                <h3 class="item-name">Cruller</h3>
+                <div class="item-image">
+                  <div class="donut-item-overlay">
+                    <p class="price">0.99</p>
+                  </div>
+                </div>
+                <p class="description invisible">
+                  This is our original Donut Prince donut! a classic!
+                </p>
+                <div class="add-container">
+                  <span class="add">Add to Bag</span>
+                  <img
+                    src="img/other-formats/close.png"
+                    alt="x"
+                    class="close-add invisible"
+                  />
+                  <div class="number-input invisible">
+                    <button class="minus"></button>
+                    <input
+                      class="quantity"
+                      min="1"
+                      name="quantity"
+                      value="1"
+                      type="number"
+                      disabled
+                    />
+                    <button class="plus"></button>
+                  </div>
+
+                  <span class="submit invisible">Submit</span>
+                  <span class="added invisible">Added &#10004;</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="drinks-menu invisible">
+            <div class="drinks-item-list">
+              <div class="drinks-item" id="hot-coffee">
+                <h3 class="item-name">Hot Coffee</h3>
+                <div class="item-image">
+                  <div class="drinks-item-overlay">
+                    <p class="price">0.99</p>
+                  </div>
+                </div>
+                <p class="description invisible">
+                  This is our original Donut Prince donut! a classic!
+                </p>
+                <div class="add-container">
+                  <span class="add">Add to Bag</span>
+                  <img
+                    src="img/other-formats/close.png"
+                    alt="x"
+                    class="close-add invisible"
+                  />
+
+                  <div class="number-input invisible">
+                    <button class="minus"></button>
+                    <input
+                      class="quantity"
+                      min="1"
+                      name="quantity"
+                      value="1"
+                      type="number"
+                      disabled
+                    />
+                    <button class="plus"></button>
+                  </div>
+
+                  <span class="submit invisible">Submit</span>
+                  <span class="added invisible">Added &#10004;</span>
+                </div>
+              </div>
+              <div class="drinks-item" id="iced-coffee">
+                <h3 class="item-name">Iced Coffee</h3>
+                <div class="item-image">
+                  <div class="drinks-item-overlay">
+                    <p class="price">1.25</p>
+                  </div>
+                </div>
+                <p class="description invisible">
+                  This is our original Donut Prince donut! a classic!
+                </p>
+                <div class="add-container">
+                  <span class="add">Add to Bag</span>
+                  <img
+                    src="img/other-formats/close.png"
+                    alt="x"
+                    class="close-add invisible"
+                  />
+
+                  <div class="number-input invisible">
+                    <button class="minus"></button>
+                    <input
+                      class="quantity"
+                      min="1"
+                      name="quantity"
+                      value="1"
+                      type="number"
+                      disabled
+                    />
+                    <button class="plus"></button>
+                  </div>
+
+                  <span class="submit invisible">Submit</span>
+                  <span class="added invisible">Added &#10004;</span>
+                </div>
+              </div>
+              <div class="drinks-item" id="latte">
+                <h3 class="item-name">Latte</h3>
+                <div class="item-image">
+                  <div class="drinks-item-overlay">
+                    <p class="price">1.99</p>
+                  </div>
+                </div>
+                <p class="description invisible">
+                  This is our original Donut Prince donut! a classic!
+                </p>
+                <div class="add-container">
+                  <span class="add">Add to Bag</span>
+                  <img
+                    src="img/other-formats/close.png"
+                    alt="x"
+                    class="close-add invisible"
+                  />
+
+                  <div class="number-input invisible">
+                    <button class="minus"></button>
+                    <input
+                      class="quantity"
+                      min="1"
+                      name="quantity"
+                      value="1"
+                      type="number"
+                      disabled
+                    />
+                    <button class="plus"></button>
+                  </div>
+
+                  <span class="submit invisible">Submit</span>
+                  <span class="added invisible">Added &#10004;</span>
+                </div>
+              </div>
+              <div class="drinks-item" id="frapp">
+                <h3 class="item-name">Frappaccuino</h3>
+                <div class="item-image">
+                  <div class="drinks-item-overlay">
+                    <p class="price">2.25</p>
+                  </div>
+                </div>
+                <p class="description invisible">
+                  This is our original Donut Prince donut! a classic!
+                </p>
+                <div class="add-container">
+                  <span class="add">Add to Bag</span>
+                  <img
+                    src="img/other-formats/close.png"
+                    alt="x"
+                    class="close-add invisible"
+                  />
+
+                  <div class="number-input invisible">
+                    <button class="minus"></button>
+                    <input
+                      class="quantity"
+                      min="1"
+                      name="quantity"
+                      value="1"
+                      type="number"
+                      disabled
+                    />
+                    <button class="plus"></button>
+                  </div>
+
+                  <span class="submit invisible">Submit</span>
+                  <span class="added invisible">Added &#10004;</span>
+                </div>
+              </div>
+              <div class="drinks-item" id="shake">
+                <h3 class="item-name">Shake</h3>
+                <div class="item-image">
+                  <div class="drinks-item-overlay">
+                    <p class="price">1.25</p>
+                  </div>
+                </div>
+                <p class="description invisible">
+                  This is our original Donut Prince donut! a classic!
+                </p>
+                <div class="add-container">
+                  <span class="add">Add to Bag</span>
+                  <img
+                    src="img/other-formats/close.png"
+                    alt="x"
+                    class="close-add invisible"
+                  />
+
+                  <div class="number-input invisible">
+                    <button class="minus"></button>
+                    <input
+                      class="quantity"
+                      min="1"
+                      maxlength="2"
+                      name="quantity"
+                      value="1"
+                      type="number"
+                      disabled
+                    />
+                    <button class="plus"></button>
+                  </div>
+
+                  <span class="submit invisible">Submit</span>
+                  <span class="added invisible">Added &#10004;</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <h2>Need to get a hold of us?</h2>
+        <p>Phone: (818) 841-0859</p>
+        <p>Hours: Open 24 hours a day</p>
+        <p>Address: 1721 W Olive Ave, Burbank, CA 91506</p>
+      </section>
+      <footer>Donut Prince&#169;2020</footer>
+    </div>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
