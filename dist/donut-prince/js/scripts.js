@@ -121,7 +121,6 @@ for (let i = 0; i <= donutsMenu.children[0].children.length - 1; i++) {
 
 for (let i = 0; i <= drinksMenu.children[0].children.length - 1; i++) {
   drinksMenu.children[0].children[i].addEventListener("mouseover", () => {
-    console.log("hi");
     drinksItemOverlay[i].classList.add("item-overlay-hover");
   });
 
@@ -194,7 +193,6 @@ for (let i = 0; i < addToBag.length; i++) {
       amountArray.push(bagAmounts[k].value);
       console.table(amountArray);
       sum += parseInt(amountArray[k]);
-      console.log(sum);
       document.querySelector(".item-amount").innerHTML = sum.toString();
       bagAmounts[k].addEventListener("keydown", () => {
         return false;
@@ -206,15 +204,9 @@ for (let i = 0; i < addToBag.length; i++) {
     let priceArray = [];
     const inBagPrices = document.querySelectorAll(".in-bag-prices");
     const mainTotalShown = document.querySelector(".main-total");
-    console.log(inBagPrices);
     for (let i = 0; i <= inBagPrices.length - 1; i++) {
-      console.log(inBagPrices[i].innerHTML.slice(1));
       priceArray.push(parseFloat(inBagPrices[i].innerHTML.slice(1)));
-
       var mainTotal = priceArray.reduce((a, b) => a + b, 0);
-      console.log(mainTotal);
-      console.table(priceArray);
-
       mainTotalShown.innerHTML = mainTotal.toFixed(2).toString();
     }
   }
@@ -230,7 +222,7 @@ for (let i = 0; i < addToBag.length; i++) {
     let newDiv = document.createElement("div");
     let deleteItem = document.createElement("img");
 
-    deleteItem.setAttribute("src", "img/close.png");
+    deleteItem.setAttribute("src", "img/other-formats/close.png");
     deleteItem.classList.add("delete");
 
     let itemName = document.createElement("span");
@@ -251,18 +243,33 @@ for (let i = 0; i < addToBag.length; i++) {
 
       newDiv.appendChild(itemTotal);
       itemTotal.innerHTML =
-        "$" + (parseFloat(submit[i].parentElement.parentElement.children[1].children[0].children[1].innerHTML)
-          * parseInt(clone.children[1].value)).toFixed(2);
+        "$" +
+        (
+          parseFloat(
+            submit[i].parentElement.parentElement.children[1].children[0]
+              .children[1].innerHTML
+          ) * parseInt(clone.children[1].value)
+        ).toFixed(2);
       newDiv.appendChild(clone);
       clone.style.display = "inline-flex";
       clone.children[1].setAttribute("disabled", "");
 
       clone.children[0].addEventListener("click", () => {
         clone.children[0].parentNode.querySelector(".quantity").stepDown();
-        if (parseInt(clone.children[0].parentNode.querySelector(".quantity").value) >= 1) {
+        if (
+          parseInt(
+            clone.children[0].parentNode.querySelector(".quantity").value
+          ) >= 1
+        ) {
           itemTotal.innerHTML =
-            "$" + (clone.children[1].value
-              * parseFloat(submit[i].parentElement.parentElement.children[1].children[0].children[1].innerHTML)).toFixed(2);
+            "$" +
+            (
+              clone.children[1].value *
+              parseFloat(
+                submit[i].parentElement.parentElement.children[1].children[0]
+                  .children[1].innerHTML
+              )
+            ).toFixed(2);
         }
         readPrices();
         getSum();
@@ -292,15 +299,13 @@ for (let i = 0; i < addToBag.length; i++) {
         document.querySelector(".item-amount").innerHTML = sum.toString();
       });
     }
-    
+
     itemName.innerHTML = submittedType;
     amount.innerHTML = inputValue[i].value;
     newDiv.appendChild(deleteItem);
     newDiv.appendChild(itemName);
 
     deleteItem.addEventListener("click", () => {
-      console.log(sum);
-
       sum =
         sum -
         parseInt(
@@ -391,7 +396,7 @@ function disableScroll() {
 
 function enableScroll() {
   html.style.scrollBehavior = "smooth";
-  window.onscroll = function () { };
+  window.onscroll = function () {};
   window.onscroll = function () {
     stickyNavScroll();
   };
@@ -423,9 +428,7 @@ const mapOuter = document.querySelector(".mapouter");
 const gmapCanvas = document.querySelector(".gmap_canvas");
 const closeMap = document.querySelector(".close-map");
 
-console.log(mapButton);
 mapButton.addEventListener("click", () => {
-  console.log("hi");
   map.setAttribute("height", "300px");
   mapOuter.style.height = "300px";
   gmapCanvas.style.height = "300px";
@@ -444,7 +447,5 @@ closeMap.addEventListener("click", () => {
 for (let i = 0; i < prices.length; i++) {
   const dollarSign = document.createElement("span");
   dollarSign.innerHTML = "$";
-  console.log(prices[i], prices.length, dollarSign);
-  console.log(prices[i].parentNode);
   prices[i].parentNode.insertBefore(dollarSign, prices[i]);
 }
