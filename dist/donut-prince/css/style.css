@@ -221,7 +221,7 @@ disable-dbl-tap-zoom {
 .logo {
   font-size: 20px;
   position: absolute;
-  left: 40px;
+  left: 20px;
 }
 .logo a {
   text-decoration: none;
@@ -828,7 +828,7 @@ input[type="number"]::-webkit-outer-spin-button {
 @media only screen and (orientation: landscape) {
   header {
     background: linear-gradient(rgba(71, 2, 43, 0.342), rgba(56, 53, 53, 0.45)),
-      url(../img/donuts.jpg);
+      url(../img/other-formats/donuts.jpg);
   }
   #original .item-image {
     background-image: url(../img/other-formats/original-glazed.jpg);
@@ -922,7 +922,7 @@ input[type="number"]::-webkit-outer-spin-button {
   }
   header {
     background: linear-gradient(rgba(71, 2, 43, 0.342), rgba(56, 53, 53, 0.45)),
-      url(../img/donuts.webp);
+      url(../img/webp/donuts.webp);
   }
   #original .item-image {
     background-image: url(../img/webp/original-glazed.webp);
