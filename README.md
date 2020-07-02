@@ -12,5 +12,3 @@ This website is modeled after a donut shop near my home called "Donut Prince" in
 - Can add, update, and delete items from the cart
 - Google Maps API to view location
 - Uses next generation image file type (webp)
-
-## Notes
