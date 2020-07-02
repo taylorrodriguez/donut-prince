@@ -1026,8 +1026,10 @@ input[type="number"]::-webkit-outer-spin-button {
   }
   .close-bag {
     position: fixed;
-    font-size: 18px;
-    bottom: 12%;
+    font-size: 25px;
+    border: 2px solid white;
+    padding:10px;
+    bottom: 15%;
     right: auto;
   }
   header {
