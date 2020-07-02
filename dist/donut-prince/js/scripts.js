@@ -87,11 +87,14 @@ const donutsMenu = document.querySelector(".donuts-menu");
 const drinksMenu = document.querySelector(".drinks-menu");
 const donutsToggle = document.querySelector(".donuts-button");
 const drinksToggle = document.querySelector(".drinks-button");
+const underBar = document.querySelector(".button-holder hr");
 
 donutsToggle.classList.add("selected");
 drinksToggle.addEventListener("click", () => {
   drinksToggle.classList.add("selected");
   donutsToggle.classList.remove("selected");
+  underBar.classList.remove("under-left");
+  underBar.classList.add("under-right");
 
   donutsMenu.classList.add("invisible");
   drinksMenu.classList.remove("invisible");
@@ -100,6 +103,8 @@ drinksToggle.addEventListener("click", () => {
 donutsToggle.addEventListener("click", () => {
   donutsToggle.classList.add("selected");
   drinksToggle.classList.remove("selected");
+  underBar.classList.remove("under-right");
+  underBar.classList.add("under-left");
 
   drinksMenu.classList.add("invisible");
   donutsMenu.classList.remove("invisible");

@@ -9,7 +9,8 @@ body {
   font-family: "Fredoka One", cursive;
 }
 button {
-  font-family: Raleway, sans-serif;
+  font-family: "Fredoka One", cursive;
+  letter-spacing: 2px;
 }
 input[type="number"],
 input[type="text"],
@@ -81,18 +82,20 @@ disable-dbl-tap-zoom {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  background-color: #162c55;
 }
 .sad {
   height: 100px;
   width: 100px;
-  margin: auto;
+  margin-top: 40px;
 }
 .empty {
-  margin: auto;
+  margin: 15px 0px;
   font-family: Raleway, sans-serif;
   font-size: 25px;
   font-weight: bolder;
+}
+.in-bag-prices {
+  font-family: Roboto, sans-serif;
 }
 .checkout {
   font-family: Raleway, sans-serif;
@@ -108,22 +111,20 @@ disable-dbl-tap-zoom {
   margin: 20px;
 }
 .total-price {
-  font-family: Raleway, sans-serif;
   font-size: 20px;
   padding: 20px;
 }
 .amount {
   font-size: 25px;
   font-weight: bolder;
-  font-family: Raleway, sans-serif;
 }
 .new-item {
   font-size: 10px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-top: 2px solid #8b8b8b;
-  border-bottom: 2px solid #8b8b8b;
+  border-top: 2px solid #d3d3d3;
+  border-bottom: 2px solid #d3d3d3;
   background-color: #fff;
   height: 50px;
   width: 100%;
@@ -131,14 +132,14 @@ disable-dbl-tap-zoom {
   padding: 10px 0 10px 0;
 }
 .new-item:hover {
-  background-color: #deb887;
+  background-color: #d3d3d3;
   transition: all 0.1s ease-in-out;
 }
 .new-item span {
   width: 50%;
   font-size: 18px;
   font-weight: bolder;
-  font-family: Raleway, sans-serif;
+  font-family: Roboto, sans-serif;
 }
 .desk-list li,
 .logo,
@@ -170,7 +171,7 @@ disable-dbl-tap-zoom {
   padding: 10px;
 }
 .desk ul li:hover {
-  background-color: #dc143c;
+  background-color: #e60073;
   border-radius: 10px;
 }
 .desk ul li a {
@@ -228,7 +229,7 @@ disable-dbl-tap-zoom {
   color: #38190f;
 }
 .logo a:hover {
-  color: #dc143c;
+  color: #e60073;
   transition: all 0.2s ease-out;
 }
 .nav-icon {
@@ -241,6 +242,13 @@ disable-dbl-tap-zoom {
 }
 .nav-icon:hover {
   cursor: pointer;
+}
+.nav-icon:hover .bar,
+.nav-con:hover .new-bar,
+.nav-icon:hover .new-nav1,
+.nav-icon:hover .new-nav2,
+.nav-icon:hover .new-nav3 {
+  background-color: #e60073;
 }
 .bar {
   width: 32px;
@@ -301,7 +309,7 @@ disable-dbl-tap-zoom {
   padding: 10px;
 }
 .nav-list li:hover {
-  background-color: #dc143c;
+  background-color: #e60073;
   border-radius: 10px;
 }
 .nav-list li a {
@@ -365,6 +373,7 @@ img {
 }
 .main-btn {
   font-family: Raleway, sans-serif;
+  font-weight: 700;
   display: inline-block;
   padding: 15px 25px;
   font-size: 24px;
@@ -373,10 +382,10 @@ img {
   text-decoration: none;
   outline: 0;
   color: #fff;
-  background-color: #923645;
+  background-color: #e60073;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.329);
   border: none;
   width: 200px;
-  border: 2px solid #fff;
   border-radius: 10px;
   transition: background-color 0.2s ease-in;
 }
@@ -410,25 +419,33 @@ img {
   background-color: #fff;
   padding: 30px;
   border-radius: 10px;
-  text-indent: 15px;
-  font-size: 20px;
-  font-family: Raleway, sans-serif;
-  border: 10px solid pink;
+  font-size: 17px;
+  font-family: "Fredoka One", cursive;
+  color: #e60073;
   text-align: center;
-  margin-bottom: 70px;
-  margin: 100px;
+  padding: 10px;
+  box-shadow: 5px 10px 10px #e600731a;
+  margin: 0 0 30px 0;
+  width: 80%;
+  line-height: 25px;
+}
+#about hr {
+  border: 2px solid #e60073;
+  width: 70%;
+  margin-bottom: 30px;
 }
 .image-holder {
+  display: flex;
+  justify-content: center;
   position: relative;
   height: 271px;
-  background-color: #f08080;
+  background-color: #f0808000;
   background-size: contain;
   background-repeat: no-repeat;
+  margin-bottom: 30px;
 }
 .map-info {
   position: absolute;
-  top: 8px;
-  left: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -440,32 +457,41 @@ img {
 .image-holder h2 {
   color: #fff;
   padding: 20px;
+  letter-spacing: 1.5px;
 }
 img[alt="restaurant"] {
+  border-radius: 10px;
+  box-shadow: 5px 10px 10px #e600731a;
   height: 100%;
-  width: 100%;
+  width: 80%;
 }
 .see-map {
   font-size: 20px;
+  letter-spacing: 1px;
+  color: #fff;
   font-family: Raleway, sans-serif;
   font-weight: bolder;
   cursor: pointer;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.329);
-  background-color: #fff;
+  background-color: #e60073;
   padding: 10px;
+  border: none;
   border-radius: 10px;
   transition: all 0.3s ease-in-out;
 }
+.see-map:hover {
+  background-color: #61173a;
+}
 .mapouter {
+  margin: auto;
   position: absolute;
-  top: 0;
-  left: 0;
   z-index: 99;
   text-align: right;
   height: 0;
-  width: 100%;
+  width: 80%;
 }
 .gmap_canvas {
+  margin: auto;
   overflow: hidden;
   position: absolute;
   background: 0 0 !important;
@@ -498,8 +524,27 @@ img[alt="restaurant"] {
 .button-holder {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  margin-bottom: 40px;
+  margin: 0px 0px 40px 0px;
+  width: 100%;
+  position: relative;
+}
+.under-left {
+  position: absolute;
+  top: 65px;
+  right: 52%;
+  margin-top: 10px;
+  width: 45%;
+  border: 2px solid #e60073;
+  transition: all 0.3s ease-in-out;
+}
+.under-right {
+  position: absolute;
+  top: 65px;
+  right: 0%;
+  margin-top: 10px;
+  width: 45%;
+  border: 2px solid #e60073;
+  transition: all 0.3s ease-in-out;
 }
 .donuts-button {
   border-radius: 10px 0 0 10px;
@@ -510,21 +555,21 @@ img[alt="restaurant"] {
 }
 .donuts-button,
 .drinks-button {
-  font-size: 4vw;
   background-color: #ffc1c1;
   color: #000;
   font-weight: bolder;
   border: 0;
   width: 50%;
-  padding: 10px 15px;
+  padding: 15px;
   margin: 0;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   box-shadow: 5px 5px 5px #7e7676;
+  font-size: 6vw;
 }
 .donuts-button:hover,
 .drinks-button:hover {
-  color: #fff;
+  color: #e60073;
 }
 .selected {
   background-color: #ffa9a9;
@@ -533,6 +578,7 @@ img[alt="restaurant"] {
 }
 .menu-categories {
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -675,19 +721,18 @@ img[alt="restaurant"] {
   background-color: #fff;
 }
 .close-bag {
+  color: white;
   position: fixed;
-  top: 90px;
-  left: 10px;
-  background-color: rgba(255, 255, 255, 0.459);
+  bottom: 100px;
+  right: 20px;
+  background-color: #e60073;
   padding: 8px;
-  border-radius: 50%;
+  border-radius: 10%;
   cursor: pointer;
-  height: 30px;
-  width: 30px;
   transition: all 0.2s ease-in-out;
 }
 .close-bag:hover {
-  background-color: #fff;
+  background-color: #61173a;
 }
 .delete {
   margin: 15px;
@@ -738,21 +783,46 @@ img[alt="restaurant"] {
 #contact {
   margin-top: 80px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   background-color: #e6e6e6;
   color: #070707;
 }
+#contact h2 {
+  letter-spacing: 0.7px;
+}
+#contact .content-holder {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 70vw;
+  margin-bottom: 20px;
+}
 #contact p {
-  font-family: Raleway, sans-serif;
+  font-family: "Fredoka One", cursive;
+  color: #e60073;
+}
+#contact img {
+  height: 25px;
+  width: 25px;
+  margin: 0 20px;
+}
+.specific-contact-holder {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  width: 207px;
 }
 footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px;
-  color: #000;
+  height: 80px;
+  color: black;
   background-color: #e6e6e6;
 }
 input[type="number"] {
@@ -825,6 +895,9 @@ input[type="number"]::-webkit-outer-spin-button {
 .main-title {
   font-size: 11vw;
 }
+
+/*MEDIA QUERIES*/
+
 @media only screen and (orientation: landscape) {
   header {
     background: linear-gradient(rgba(71, 2, 43, 0.342), rgba(56, 53, 53, 0.45)),
@@ -865,11 +938,11 @@ input[type="number"]::-webkit-outer-spin-button {
     background-image: url(../img/other-formats/shake.jpg);
   }
 }
-@media only screen and (max-width: 530px) {
-  #about p {
-    width: 100%;
-    font-size: 13px;
-    margin: 10px;
+@media only screen and (min-width: 500px) {
+  .under-right,
+  .under-left {
+    top: 75px;
+    border: 3px solid #e60073;
   }
 }
 @media only screen and (min-width: 600px) {
@@ -877,10 +950,28 @@ input[type="number"]::-webkit-outer-spin-button {
   .drinks-item {
     width: 300px;
   }
+  .donuts-button,
+  .drinks-button {
+    font-size: 36px;
+    width: 408.237px;
+  }
+  .close-bag {
+    bottom: 100px;
+    right: 30px;
+  }
 }
 @media only screen and (min-width: 768px) {
   #about p {
-    width: 470.71px;
+    width: 617.11px;
+  }
+  .image-holder {
+    margin-bottom: 60px;
+  }
+  .image-holder img {
+    width: 617.11px;
+  }
+  .mapouter {
+    width: 618px;
   }
   .nav-icon {
     display: none;
@@ -889,7 +980,7 @@ input[type="number"]::-webkit-outer-spin-button {
     display: none;
   }
   .desk {
-    border-bottom: 2px solid #20b2aa;
+    border-bottom: 2px solid lightseagreen;
   }
   .desk ul {
     display: flex;
@@ -901,24 +992,43 @@ input[type="number"]::-webkit-outer-spin-button {
     height: 150px;
     width: 150px;
   }
-  .donuts-button,
-  .drinks-button {
-    font-size: 30.72px;
+  .under-right,
+  .under-left {
+    top: 85px;
+    width: 242.63px;
+  }
+  .button-holder {
+    width: 525.84px;
+  }
+  .close-bag {
+    bottom: 100px;
+    right: 40px;
+  }
+  .specific-contact-holder {
+    margin: 10px;
   }
 }
 @media only screen and (min-width: 992px) {
   .main-title {
     font-size: 109.12px;
   }
-  img[alt="restaurant"] {
-    height: 100%;
-    width: 100%;
+  #about p {
+    font-size: 22px;
+    line-height: 40px;
+    letter-spacing: 1px;
   }
-  .image-holder {
-    width: 500px;
-  }
+
   .bag-list-container {
     width: 881.68px;
+  }
+  .new-item {
+    width: 70%;
+  }
+  .close-bag {
+    position: fixed;
+    font-size: 18px;
+    bottom: 12%;
+    right: auto;
   }
   header {
     background: linear-gradient(rgba(71, 2, 43, 0.342), rgba(56, 53, 53, 0.45)),
@@ -957,6 +1067,9 @@ input[type="number"]::-webkit-outer-spin-button {
   }
   #shake .item-image {
     background-image: url(../img/webp/shake.webp);
+  }
+  .specific-contact-holder {
+    justify-content: center;
   }
 }
 @media not all and (-webkit-min-device-pixel-ratio: 0) {
