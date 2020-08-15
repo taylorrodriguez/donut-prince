@@ -3,7 +3,7 @@
 This website is modeled after a donut shop near my home called "Donut Prince" in Burbank, CA. A customer can add any donut or beverage from the menu into to their bag, update the amounts, and delete items from the cart. Everything works dynamically including price changes. A google maps API is integrated as well. I used HTML, CSS, and  vanilla JS. 
 
 ## Usage
-(Sped up x2, visit https://donut-prince.web.app for a more accuarte UI/UX)
+(Sped up x2, visit https://donut-prince.web.app for a more accurate experience)
 ![demo-gif](donut-prince.gif)
 
 ## Features
